@@ -1,0 +1,460 @@
+/* Custom styles for Mentra */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile Container - Makes it look like a phone */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+  padding: 1rem;
+}
+
+/* Phone frame wrapper */
+.phone-container {
+  max-width: 430px;
+  width: 100%;
+  height: 844px; /* Fixed iPhone height */
+  margin: 0 auto;
+  background: white;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Override for login page - keep full screen gradient */
+.gradient-bg {
+  background: linear-gradient(135deg, #3B82F6 0%, #9333EA 50%, #EC4899 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100vw;
+  margin: -1rem;
+}
+
+/* Dashboard container phone view */
+.dashboard-container {
+  height: 100%;
+  width: 100%;
+  background: #F9FAFB;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #3B82F6 0%, #9333EA 50%, #EC4899 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  max-width: 500px;
+  width: 100%;
+}
+
+.app-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.app-tagline {
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Role selection cards */
+.role-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.role-card {
+  padding: 1.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.role-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.role-card.selected-student {
+  border-color: #3B82F6;
+  background-color: #EFF6FF;
+}
+
+.role-card.selected-faculty {
+  border-color: #4F46E5;
+  background-color: #EEF2FF;
+}
+
+.role-card.selected-counselor {
+  border-color: #14B8A6;
+  background-color: #F0FDFA;
+}
+
+.role-card.selected-admin {
+  border-color: #EF4444;
+  background-color: #FEF2F2;
+}
+
+.role-icon {
+  margin-bottom: 0.5rem;
+}
+
+.role-icon.student { color: #3B82F6; }
+.role-icon.faculty { color: #4F46E5; }
+.role-icon.counselor { color: #14B8A6; }
+.role-icon.admin { color: #EF4444; }
+
+.role-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Form inputs */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Login button */
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.login-button.enabled {
+  background: linear-gradient(135deg, #3B82F6 0%, #9333EA 100%);
+  color: white;
+}
+
+.login-button.enabled:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.login-button.disabled {
+  background: #E5E7EB;
+  color: #9CA3AF;
+  cursor: not-allowed;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.forgot-password a {
+  color: #3B82F6;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard styles */
+.dashboard-container {
+  min-height: 100vh;
+  background: #F9FAFB;
+}
+
+.top-nav {
+  background: white;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #E5E7EB;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #6B7280;
+  transition: color 0.3s;
+  border: none;
+  background: none;
+  flex: 1;
+}
+
+.nav-item.active {
+  color: #3B82F6;
+}
+
+.nav-item span {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.dashboard-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  padding-bottom: 80px;
+}
+
+.welcome-banner {
+  background: linear-gradient(135deg, #3B82F6 0%, #9333EA 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-subtitle {
+  opacity: 0.9;
+  margin: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.section-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.section-title svg {
+  margin-right: 0.5rem;
+}
+
+.review-card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+  border-radius: 0.25rem;
+}
+
+.review-card.green {
+  border-color: #10B981;
+  background-color: #ECFDF5;
+}
+
+.review-card.blue {
+  border-color: #3B82F6;
+  background-color: #EFF6FF;
+}
+
+.review-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-text {
+  font-size: 0.75rem;
+  color: #4B5563;
+  margin-bottom: 0.5rem;
+}
+
+.review-time {
+  font-size: 0.75rem;
+  color: #9CA3AF;
+}
+
+.badges-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.badge-card {
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #FEF3C7 0%, #FED7AA 100%);
+  border: 2px solid #F59E0B;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  min-width: 120px;
+}
+
+.badge-icon {
+  color: #D97706;
+  margin-bottom: 0.5rem;
+}
+
+.badge-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 2rem;
+  }
+  
+  .app-title {
+    font-size: 2rem;
+  }
+}
+
+/* Ensure phone container has relative positioning */
+.phone-container {
+  max-width: 430px;
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  position: relative; /* This is important! */
+  min-height: 844px; /* iPhone height */
+  max-height: 90vh;
+}
+
+.dashboard-container {
+  min-height: 100%;
+  max-height: 100%;
+  background: #F9FAFB;
+  overflow-y: auto;
+  position: relative; /* This is important! */
+}
